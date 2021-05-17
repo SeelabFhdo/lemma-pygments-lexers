@@ -1,3 +1,4 @@
+lemma_pygments_lexers/__pycache__/
 reinstall.sh
-test_domain_data.sh
-test.data
+reinstall_and_serve.sh
+test*
