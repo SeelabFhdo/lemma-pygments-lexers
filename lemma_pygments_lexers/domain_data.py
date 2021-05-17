@@ -18,6 +18,7 @@ class LemmaDomainDataLexer(RegexLexer):
                 'hide',
                 'immutable',
                 'string',
+                'list',
                 'structure',
                 'unspecified'
             ), prefix=r'\b', suffix=r'\b'), Keyword),
