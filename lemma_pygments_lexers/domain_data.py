@@ -2,7 +2,17 @@
 from pygments.lexer import RegexLexer, bygroups, words
 from pygments.token import *
 
-__all__ = ("LemmaDomainDataLexer")
+__all__ = ("LemmaDomainDataLexer", "PRIMITIVE_TYPE_TOKENS")
+
+PRIMITIVE_TYPE_TOKENS = (
+    'date',
+    'double',
+    'boolean',
+    'float',
+    'int',
+    'long',
+    'string',
+)
 
 class LemmaDomainDataLexer(RegexLexer):
     name = 'LEMMA Domain Data Modeling Language'
@@ -14,14 +24,12 @@ class LemmaDomainDataLexer(RegexLexer):
         'root': [
             (words((
                 'context',
-                'double',
                 'hide',
                 'immutable',
-                'string',
                 'list',
                 'structure',
                 'unspecified'
-            ), prefix=r'\b', suffix=r'\b'), Keyword),
+            )+PRIMITIVE_TYPE_TOKENS, prefix=r'\b', suffix=r'\b'), Keyword),
             (r'(true|false)\b', Keyword.Constant),
             # Features with one or two components, e.g., "<aggregate>" or
             # "<aggregate, entity>"
