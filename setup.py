@@ -5,6 +5,7 @@ entry_points = '''
 [pygments.lexers]
 lemmadomaindata=lemma_pygments_lexers:LemmaDomainDataLexer
 lemmaservices=lemma_pygments_lexers:LemmaServicesLexer
+lemmatechnology=lemma_pygments_lexers:LemmaTechnologyLexer
 '''
 
 setup(
