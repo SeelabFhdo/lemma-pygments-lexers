@@ -33,6 +33,7 @@ class LemmaServicesLexer(RegexLexer):
             (words((
                 'as',
                 'datatypes',
+                'fault',
                 'from',
                 'functional',
                 'import',
