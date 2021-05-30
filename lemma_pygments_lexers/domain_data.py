@@ -5,13 +5,17 @@ from pygments.token import *
 __all__ = ("LemmaDomainDataLexer", "PRIMITIVE_TYPE_TOKENS")
 
 PRIMITIVE_TYPE_TOKENS = (
+    'byte',
+    'char',
     'date',
     'double',
     'boolean',
     'float',
     'int',
     'long',
+    'short',
     'string',
+    'unspecified',
 )
 
 class LemmaDomainDataLexer(RegexLexer):
