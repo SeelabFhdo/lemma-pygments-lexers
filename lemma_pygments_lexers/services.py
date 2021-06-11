@@ -1,4 +1,4 @@
-"""A Pygments lexer for LEMMA's Domain Data Modeling Language."""
+"""A Pygments lexer for LEMMA's Service Modeling Language."""
 from pygments.lexer import RegexLexer, bygroups, include, words
 from pygments.token import *
 from . import PRIMITIVE_TYPE_TOKENS
