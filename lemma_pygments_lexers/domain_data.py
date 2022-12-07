@@ -27,7 +27,9 @@ class LemmaDomainDataLexer(RegexLexer):
     tokens = {
         'root': [
             (words((
+                'collection',
                 'context',
+                'enum',
                 'hide',
                 'immutable',
                 'list',
