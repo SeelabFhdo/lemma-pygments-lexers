@@ -38,6 +38,7 @@ class LemmaDomainDataLexer(RegexLexer):
                 'collection',
                 'context',
                 'enum',
+                'function',
                 'hide',
                 'immutable',
                 'list',
