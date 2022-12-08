@@ -20,6 +20,7 @@ class LemmaServicesLexer(RegexLexer):
         ],
         'api_comments': [
             (r'@required', Name.Builtin.Pseudo, 'api_comments_refparams'),
+            (r'@returns', Name.Builtin.Pseudo, 'api_comments_refparams'),
             (r'[^---]', Name.Function),
             (r'---', Name.Function, '#pop')
         ],
