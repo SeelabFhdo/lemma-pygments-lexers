@@ -25,7 +25,15 @@ class LemmaDomainDataLexer(RegexLexer):
     mimetypes = ['text/lemmadomaindata']
 
     tokens = {
+        'comments': [
+            (r'[^*/]', Comment.Multiline),
+            (r'/\*', Comment.Multiline, '#push'),
+            (r'\*/', Comment.Multiline, '#pop'),
+            (r'[*/]', Comment.Multiline)
+        ],
         'root': [
+            (r'/\*', Comment.Multiline, 'comments'),
+            (r'//.*?$', Comment.Singleline),
             (words((
                 'collection',
                 'context',
